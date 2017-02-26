@@ -1,13 +1,13 @@
 {
-  "name": "vql",
+  "name": "vizi-vql",
   "version": "1.0.0",
   "description": "Vizi querying language",
   "scripts": {
     "build": "npm run build-cjs && npm run build-es6 && rimraf umd && npm run build-umd && npm run build-min",
     "build-cjs": "rimraf lib && babel ./src -d lib",
     "build-es6": "rimraf es6 && babel ./src -d es6 --blacklist=es6.modules",
-    "build-umd": "webpack --env=development src/index.js umd/npm-package-template.js",
-    "build-min": "webpack --env=production src/index.js umd/npm-package-template.min.js",
+    "build-umd": "webpack --env=development src/index.js umd/vizi-vql.js",
+    "build-min": "webpack --env=production src/index.js umd/vizi-vql.min.js",
     "lint": "eslint src",
     "test": "mocha --recursive tests",
     "start": "npm run build-cjs && node demo/repl.js"
@@ -15,7 +15,7 @@
   "main": "lib/index",
   "jsnext:main": "es6/index",
   "engines": {
-    "node": ">=6.9.x",
+    "node": "^6.1.0",
     "yarn": ">=0.18.0"
   },
   "repository": {
@@ -34,7 +34,7 @@
     "src/*/**"
   ],
   "keywords": [],
-  "author": "",
+  "author": "Vizi-Dashboard",
   "license": "MIT",
   "homepage": "https://github.com/Vizi-Dashboard/vql",
   "dependencies": {},

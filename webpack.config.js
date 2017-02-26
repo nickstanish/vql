@@ -6,7 +6,7 @@ module.exports = function (env) {
     entry: './src/index.js',
 
     output: {
-      library: 'vql',
+      library: 'vizi-vql',
       libraryTarget: 'umd'
     },
 
